@@ -11,7 +11,7 @@
 .container{
   background-image: url('pic.jpg');
   background-size: cover;
-  max-width: 380px;
+  max-width: 580px;
   min-height: 400px;
 }
 .container button{

@@ -1,0 +1,14 @@
+.infoTab{
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.infoTab h4{
+    margin-left: 30%;
+}
+
+.infoTab p{
+
+        border: 1.2px solid red;
+
+}

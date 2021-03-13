@@ -11,7 +11,10 @@ class App extends React.Component{
     this.state={
       "temp":'',
       "temp_min":'',
-      "temp_max":''
+      "temp_max":'',
+      "show": '',
+      'icon_code':'',
+      "current_city":''
     };
 
     this.Btn_Click=this.Btn_Click.bind(this);
@@ -38,7 +41,10 @@ class App extends React.Component{
        self.setState({
          "temp":parseFloat(response.data.main["temp"])-273.15,
          "temp_max": parseFloat(response.data.main["temp_max"])-273.15,
-         "temp_min":parseFloat(response.data.main["temp_min"])-273.15
+         "temp_min":parseFloat(response.data.main["temp_min"])-273.15,
+         "icon_code":response.data.weather["0"]["icon"],
+         "show":'true',
+         "current_city":self.query
        });
        console.log(self.state);
     })
@@ -63,7 +69,7 @@ class App extends React.Component{
           <label for="city_name">Enter the name of the city</label>
         </div>
         <button class="waves-effect  btn-small" onClick={this.Btn_Click}>Search</button>
-        <button onClick={this.checkState}>Check State</button>
+        
         <Weather_info valueFromParent={this.state} >
           
         
